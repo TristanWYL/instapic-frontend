@@ -14,7 +14,7 @@ class WidgetFooter extends StatelessWidget {
         children: [
         Padding(padding: EdgeInsets.symmetric(vertical: 5),
           child: SelectableLinkify(
-            text: "Authur: Tristan Yulong WU",
+            text: "Author: Tristan Yulong WU",
             style: TextStyle(
               fontSize: 20,
             ),
@@ -41,7 +41,7 @@ class WidgetFooter extends StatelessWidget {
                 ),
               ),
               SelectableLinkify(
-                text: "    Frontend: https://github.com/TristanWYL/instapic-frontend.git",
+                text: "    Frontend: https://github.com/TristanWYL/instapic-frontend",
                 onOpen: (link) async {
                   await launch(link.url);
                 },
@@ -50,7 +50,7 @@ class WidgetFooter extends StatelessWidget {
                 ),
               ),
               SelectableLinkify(
-                text: "    Backend: https://github.com/TristanWYL/instapic-backend.git",
+                text: "    Backend: https://github.com/TristanWYL/instapic-backend",
                 onOpen: (link) async {
                   await launch(link.url);
                 },
