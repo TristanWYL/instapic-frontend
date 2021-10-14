@@ -27,7 +27,7 @@ class _WidgetSignState extends State<WidgetSign> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 450,
+      width: 400,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

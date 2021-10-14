@@ -8,6 +8,7 @@ import 'package:instapic/redux/selectors/selectors.dart';
 import 'package:instapic/ui/keys.dart';
 import 'package:instapic/ui/routes.dart';
 import 'package:redux/redux.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class WidgetFilter extends StatefulWidget {
   WidgetFilter({Key? key}) : super(key: key);
@@ -198,12 +199,12 @@ class WidgetFilterItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 70,
+              width: kIsWeb?70:50,
               height: 30,
               child: Text(title, style: TextStyle(color: Colors.cyan[900], fontWeight: FontWeight.bold),),
             ),
-            SizedBox(width: 30),
-            SizedBox(width: 300, child: item)
+            SizedBox(width: kIsWeb?30:10),
+            SizedBox(width: kIsWeb?300:200, child: item)
           ],
         ),
         SizedBox(height: 30,)

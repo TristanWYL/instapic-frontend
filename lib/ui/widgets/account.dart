@@ -13,7 +13,7 @@ class WidgetAccount extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10))),
-      margin: EdgeInsets.symmetric(horizontal: 100, vertical: 100),
+      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Center(
         child: StoreConnector<AppState, _ViewModel>(
           distinct: true,

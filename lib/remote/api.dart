@@ -1,14 +1,28 @@
+import 'dart:io';
 import 'dart:typed_data';
+import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:instapic/misc/config.dart';
 import 'package:instapic/remote/response.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:stack_trace/stack_trace.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 
 /// Gets information from the API.
 class Api{
   Dio dio = Dio();
   static const int API_EXCEPTION_CODE = 1000;
+
+  Api(){
+    if(!kIsWeb){
+      getApplicationDocumentsDirectory().then((value){
+        var cj = PersistCookieJar(ignoreExpires: true, storage: FileStorage(value.path +"/.cookies/" ));
+        dio.interceptors.add(CookieManager(cj));
+      });
+    }
+  }
 
   String getErrorMsg(Object e, int statusCode){
     // print(e);
