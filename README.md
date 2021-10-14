@@ -1,5 +1,6 @@
 - [1. Overview](#1-overview)
   - [1.1. Technology Stack](#11-technology-stack)
+- [UI structure](#ui-structure)
 - [2. How to use this repository](#2-how-to-use-this-repository)
 - [3. Some technology details](#3-some-technology-details)
   - [3.1. State management](#31-state-management)
@@ -15,6 +16,32 @@ The backend of this repository could be found at [another repository](https://gi
 
 ## 1.1. Technology Stack
     Flutter
+
+# UI structure
+
+This frontend client supports the following features:
+
+1. Sign in
+   
+![signin](./screenshots/signin.png "Signin page, which is also the default page when you first visits this frontend.")
+
+By clicking on the text button red-circled in the screenshot, you will be directed to the sign-up page.
+
+2. Sign up
+
+!["signup"](./screenshots/signup.png "Signup page, where the user could apply for an account.")
+
+3. Post browsing
+
+!["browse"](./screenshots/browse.png "Browsing page, where the user could browse all posts uploaded. This page is also the default view once the user logs in.")
+
+4. Filtering
+
+!["filter"](./screenshots/filter.png "Filtering page, where the user could filter out posts not concerned.")
+
+5. Uploading
+
+!["upload"](./screenshots/upload.png "Uploading page, where the user could upload her/his own posts.")
 
 # 2. How to use this repository
 
